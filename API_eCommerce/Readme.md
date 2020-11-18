@@ -33,7 +33,7 @@ const saleSchema = mongoose.Schema({
 });
 ```
 
-### <ins>Testeo de API ECommerce:</ins>
+## Testeo de API ECommerce:
 
 ### <ins>**Colección Productos:**</ins>
 
