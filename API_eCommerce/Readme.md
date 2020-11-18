@@ -11,7 +11,7 @@ Utilizando MongoDB, Express y NodeJS
 2. En la consola, dentro de la carpeta API_eCommerce iniciar: npm start
 3. Testear la API con Postman o similar.
 
-### Se crearon dos colecciones: Productos y Ventas (seún enunciado),  con la implementación de Mongoose.
+### Se crearon dos colecciones: Productos y Ventas (según enunciado),  con la implementación en Mongoose.
 
 ```js
 const productSchema = mongoose.Schema({
@@ -33,7 +33,7 @@ const saleSchema = mongoose.Schema({
 });
 ```
 
-### <ins>Testeo de API:</ins>
+### <ins>Testeo de API ECommerce:</ins>
 
 ### <ins>**Productos:**</ins>
 
@@ -41,10 +41,16 @@ const saleSchema = mongoose.Schema({
 
 - Obtener producto dado su ID (GET): http://localhost:8080/productos/:ID
 
-- Agregar un producto nuevo (POST): http://localhost:8080/products
+```js
+Por ejemplo para utilizar en Postman:
+
+http://localhost:8080/productos/5fb524f5a106882cc80acf89
+```
+
+- Agregar un producto nuevo (POST): http://localhost:8080/productos
 
 ```js
-Ejemplo para utilizar de Body
+Por ejemplo para utilizar en Postman (body > raw > json):
 {
     "name": "Nuevo",
     "description": "cerveza nueva",
@@ -56,18 +62,25 @@ Ejemplo para utilizar de Body
 - Modificar un producto dado su ID (PUT): http://localhost:8080/productos/:ID
 
 ```js
-Ejemplo para utilizar de Body
+Por ejemplo para utilizar en Postman (body > raw > json):
+
+http://localhost:8080/productos/5fb524f5a106882cc80acf89
+
 {
-    "name": "Product1Modified",
-    "description": "Description1Modified",
-    "stock": 300,
-    "price": 130
+    "name": "Nombre modificado",
+    "description": "Cerveza modificada",
+    "stock": 1000,
+    "price": 100
 }
 ```
 
 - Eliminar un producto dado su ID (DELETE): http://localhost:8080/productos/:ID
 
+```js
+Por ejemplo para utilizar en Postman:
 
+http://localhost:8080/productos/5fb524f5a106882cc80acf89
+```
 
 ### <ins>**Ventas:**</ins>
 
@@ -75,17 +88,29 @@ Ejemplo para utilizar de Body
 
 - Obtener una venta dado su ID (GET): http://localhost:8080/ventas/:ID
 
+```js
+Por ejemplo para utilizar en Postman:
+
+http://localhost:8080/ventas/5fb5285a9e8f9620e4415131
+```
+
 - Agregar una nueva venta (POST): http://localhost:8080/ventas
 
 ```js
-Ejemplo para utilizar de Body
+Por ejemplo para utilizar en Postman (body > raw > json):
 {
-    "direction": "Alem",
-    "totalPrice": 150,
+    "direction": "Belgrano 128",
+    "totalPrice": 130,
     "products": [
-        "5fb1c8d4ed202f2b2c1a14ec"
+        "5fb52519a106882cc80acf8a"
     ]
 }
 ```
 
 - Eliminar una venta dado su ID (DELETE): http://localhost:8080/ventas/:ID
+
+```js
+Por ejemplo para utilizar en Postman:
+
+http://localhost:8080/ventas/5fb529119e8f9620e4415132
+```
