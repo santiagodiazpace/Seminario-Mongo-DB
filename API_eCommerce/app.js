@@ -13,15 +13,14 @@ const salesRoute = require('./routes/ventas');
 
 app.use(bodyParser.json());
 
-app.use('/products', productsRoute);
-app.use('/sales', salesRoute);
+app.use('/productos', productsRoute);
+app.use('/ventas', salesRoute);
 
 // Se conecta a Mongo
 mongoose.connect(
     process.env.DB_CONNECTION,
-    { useNewUrlParser: true, useUnifiedTopology: true }, () =>
-    console.log('Conectado a la base con exito')
+    { useNewUrlParser: true, useUnifiedTopology: true }, () => console.log('--> Conectado a la base con exito')
 );
 
-// Puerto que se utiliza
+// Utiliza puerto
 app.listen(8080);
