@@ -1,6 +1,6 @@
 # Seminario MongoDB 2020 - TP Final API ECommerce
 
-<strong>Trabajo realizado por Santiago Diaz Pace<strong>
+<strong>Trabajo realizado por Santiago Diaz Pace</strong>
 
 Utilizando MongoDB, Express y NodeJS
 
@@ -8,7 +8,7 @@ Utilizando MongoDB, Express y NodeJS
 ## Antes de inciar testeo de la API ECommerce:
 
 1. Descargar el proyecto de GitHub.
-2. En la consola, dentro de la carpeta API_eCommerce iniciar: <strong>npm start<strong>
+2. En la consola, dentro de la carpeta API_eCommerce iniciar: <strong>npm start</strong>
 3. Testear la API con Postman o similar.
 
 ### Se crearon dos colecciones: Productos y Ventas (según enunciado),  con la implementación en Mongoose.
