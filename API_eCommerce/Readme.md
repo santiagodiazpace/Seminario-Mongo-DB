@@ -35,7 +35,7 @@ const saleSchema = mongoose.Schema({
 
 ### <ins>Testeo de API ECommerce:</ins>
 
-### <ins>**Productos:**</ins>
+### <ins>**Colección Productos:**</ins>
 
 - Obtener todos los productos (GET): http://localhost:8080/productos
 
@@ -82,7 +82,7 @@ Por ejemplo para utilizar en Postman:
 http://localhost:8080/productos/5fb524f5a106882cc80acf89
 ```
 
-### <ins>**Ventas:**</ins>
+### <ins>**Colección Ventas:**</ins>
 
 - Obtener todas las ventas (GET): http://localhost:8080/ventas
 
@@ -101,6 +101,22 @@ Por ejemplo para utilizar en Postman (body > raw > json):
 {
     "direction": "Belgrano 128",
     "totalPrice": 130,
+    "products": [
+        "5fb52519a106882cc80acf8a"
+    ]
+}
+```
+
+- Modificar una venta dado su ID (PUT): http://localhost:8080/ventas/:ID
+
+```js
+Por ejemplo para utilizar en Postman (body > raw > json):
+
+http://localhost:8080/ventas/5fb529119e8f9620e4415132
+
+{
+    "direction": "Direccion modificada",
+    "totalPrice": 1300,
     "products": [
         "5fb52519a106882cc80acf8a"
     ]
